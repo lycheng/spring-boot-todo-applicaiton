@@ -3,12 +3,13 @@ Spring Boot Project Test Step By Step
 
 Project structure will follow the [2.1 Structuring Your Code][1]
 
-[1]: https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.structuring-your-code
 
 # Change Log
 
 0.0.2
 ---
+
+PR: [#1](https://github.com/lycheng/spring-test/pull/1)
 
 ```java
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -26,3 +27,6 @@ Features
 ---
 
 With only one `/ping` API, no log, no database connection.
+
+
+[1]: https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.structuring-your-code
