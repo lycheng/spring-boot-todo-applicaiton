@@ -3,13 +3,10 @@ Spring Boot Project Test Step By Step
 
 Project structure will follow the [2.1 Structuring Your Code][1]
 
-
 # Change Log
 
 0.0.2
 ---
-
-PR: [#1](https://github.com/lycheng/spring-test/pull/1)
 
 ```java
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -17,7 +14,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter; // Dep
 ```
 
 During the Google search, I found that there still many example about the Interceptor using
-the `HandlerInterceptorAdapter` which is deprecated. 
+the `HandlerInterceptorAdapter` which is deprecated.
 
 Features
 
