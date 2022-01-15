@@ -1,0 +1,9 @@
+app:
+  version: @project.version@
+
+java:
+  version: @java.version@
+
+logging:
+  level:
+    root: info
