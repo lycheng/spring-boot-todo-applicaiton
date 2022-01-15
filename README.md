@@ -20,8 +20,6 @@ References
 
 * [Chapter 8: Mapped Diagnostic Context][2]
 
-* [MDC]
-
 0.0.2
 ---
 
