@@ -1,14 +1,24 @@
-Spring Boot Project Test Step By Step
+Spring Boot Project Step By Step
 ===
 
 Project structure will follow the [2.1 Structuring Your Code][1]
 
 # Change Log
 
+0.0.4
+---
+
+Features:
+
+* package rename to `todoapp`
+* MyBatis-Plus 
+* docker-compose file for local debug
+* version-controlled database schema changes by Flyway
+
 0.0.3
 ---
 
-PR: [#2](https://github.com/lycheng/spring-test/pull/2)
+PR: [#2](https://github.com/lycheng/spring-boot-todo-applicaiton/pull/2)
 
 Features:
 
@@ -23,7 +33,7 @@ References
 0.0.2
 ---
 
-PR: [#1](https://github.com/lycheng/spring-test/pull/1)
+PR: [#1](https://github.com/lycheng/spring-boot-todo-applicaiton/pull/1)
 
 ```java
 import org.springframework.web.servlet.HandlerInterceptor;
