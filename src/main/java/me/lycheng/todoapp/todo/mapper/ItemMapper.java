@@ -1,9 +1,8 @@
-package me.lycheng.todoapp.todo.model;
+package me.lycheng.todoapp.todo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+import me.lycheng.todoapp.todo.entity.Item;
 
-@Mapper
 public interface ItemMapper extends BaseMapper<Item> {
 
 }

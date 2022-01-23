@@ -49,8 +49,8 @@ public class CommonInterceptor implements HandlerInterceptor {
             var date = new Date();
             elapsed = date.getTime() - Long.parseLong(startTime);
         }
-        log.info(String.format("api=%s status_code=%d elapsed=%dms",
-                request.getServletPath(), response.getStatus(), elapsed));
+        log.info(String.format("api=%s method=%s status_code=%d elapsed=%dms",
+                request.getRequestURI(), request.getMethod(), response.getStatus(), elapsed));
         MDC.clear();
     }
 }
