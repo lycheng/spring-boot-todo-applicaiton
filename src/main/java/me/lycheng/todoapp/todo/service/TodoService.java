@@ -1,13 +1,19 @@
 package me.lycheng.todoapp.todo.service;
 
-import me.lycheng.todoapp.todo.model.Item;
+import me.lycheng.todoapp.todo.rest.DelItemResponse;
 import me.lycheng.todoapp.todo.rest.ItemResponse;
-import me.lycheng.todoapp.todo.rest.NewItemRequest;
+import me.lycheng.todoapp.todo.rest.ItemRequest;
 
 import java.util.List;
 
 public interface TodoService {
-    List<Item> allItems();
+    List<ItemResponse> allItems();
 
-    ItemResponse newItem(NewItemRequest request);
+    ItemResponse newItem(ItemRequest request);
+
+    ItemResponse getItem(int id);
+
+    DelItemResponse delItem(int id);
+
+    ItemResponse putItem(int id, ItemRequest request);
 }

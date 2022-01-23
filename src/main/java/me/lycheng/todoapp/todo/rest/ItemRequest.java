@@ -7,7 +7,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class NewItemRequest {
+public class ItemRequest {
 
     @NotNull
     private String content;
