@@ -1,6 +1,6 @@
 package me.lycheng.todoapp.todo;
 
-import me.lycheng.todoapp.todo.entity.Item;
+import me.lycheng.todoapp.todo.model.Item;
 import me.lycheng.todoapp.todo.rest.NewItemRequest;
 import me.lycheng.todoapp.todo.rest.ItemResponse;
 import me.lycheng.todoapp.todo.service.TodoService;
