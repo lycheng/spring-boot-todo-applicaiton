@@ -8,6 +8,8 @@ Project structure will follow the [2.1 Structuring Your Code][1]
 0.0.4
 ---
 
+PR: [#3](https://github.com/lycheng/spring-boot-todo-applicaiton/pull/3)
+
 Features:
 
 * package rename to `todoapp`
@@ -35,7 +37,7 @@ http POST http://host.docker.internal:8080/todo/ content=content finished=1
 
 # update item
 http put http://host.docker.internal:8080/todo/1 content='new content' finished=0
- 
+
 # get item
 http http://host.docker.internal:8080/todo/
 http http://host.docker.internal:8080/todo/1
