@@ -11,7 +11,8 @@ Project structure will follow the [2.1 Structuring Your Code][1]
 Features:
 
 * package rename to `todoapp`
-* MyBatis-Plus 
+* introduced MyBatis-Plus for database functions
+* introduced mapstruct for Java bean conversion
 * docker-compose file for local debug
 * version-controlled database schema changes by Flyway
 
@@ -25,6 +26,23 @@ Features:
 * introduced logback
 * CommonInterceptor log api status code and elapsed time
 * CommonInterceptor will generate random uuid for empty request trace id
+
+Test with HTTPie
+
+```shell
+# new item
+http POST http://host.docker.internal:8080/todo/ content=content finished=1
+
+# update item
+http put http://host.docker.internal:8080/todo/1 content='new content' finished=0
+ 
+# get item
+http http://host.docker.internal:8080/todo/
+http http://host.docker.internal:8080/todo/1
+
+# delete item
+http DELETE http://host.docker.internal:8080/todo/1
+```
 
 References
 
