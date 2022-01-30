@@ -1,20 +1,48 @@
-Spring Boot Project Test Step By Step
+Spring Boot Project Step By Step
 ===
 
 Project structure will follow the [2.1 Structuring Your Code][1]
 
 # Change Log
 
+0.0.4
+---
+
+Features:
+
+* package rename to `todoapp`
+* introduced MyBatis-Plus for database functions
+* introduced mapstruct for Java bean conversion
+* docker-compose file for local debug
+* version-controlled database schema changes by Flyway
+
 0.0.3
 ---
 
-PR: [#2](https://github.com/lycheng/spring-test/pull/2)
+PR: [#2](https://github.com/lycheng/spring-boot-todo-applicaiton/pull/2)
 
 Features:
 
 * introduced logback
 * CommonInterceptor log api status code and elapsed time
 * CommonInterceptor will generate random uuid for empty request trace id
+
+Test with HTTPie
+
+```shell
+# new item
+http POST http://host.docker.internal:8080/todo/ content=content finished=1
+
+# update item
+http put http://host.docker.internal:8080/todo/1 content='new content' finished=0
+ 
+# get item
+http http://host.docker.internal:8080/todo/
+http http://host.docker.internal:8080/todo/1
+
+# delete item
+http DELETE http://host.docker.internal:8080/todo/1
+```
 
 References
 
@@ -23,7 +51,7 @@ References
 0.0.2
 ---
 
-PR: [#1](https://github.com/lycheng/spring-test/pull/1)
+PR: [#1](https://github.com/lycheng/spring-boot-todo-applicaiton/pull/1)
 
 ```java
 import org.springframework.web.servlet.HandlerInterceptor;

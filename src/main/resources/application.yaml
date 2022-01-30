@@ -7,3 +7,19 @@ java:
 logging:
   level:
     root: info
+
+spring:
+  application:
+    name: Spring-Boot-Todo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306}/${DATABASE_NAME:todo}
+    password: "${DATABASE_USER:root}"
+    username: "${DATABASE_PASSWORD:root}"
+  flyway:
+    enabled: true
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306}/mysql
+    schemas: "${DATABASE_NAME:todo}"
+    user: "${FLYWAY_DATABASE_USER:root}"
+    password: "${FLYWAY_DATABASE_PASSWORD:root}"
+

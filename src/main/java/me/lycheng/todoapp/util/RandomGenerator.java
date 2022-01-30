@@ -1,4 +1,4 @@
-package me.lycheng.st.util;
+package me.lycheng.todoapp.util;
 
 import java.util.UUID;
 
