@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>me.lycheng</groupId>
-	<artifactId>spring-boot-todo-application</artifactId>
-	<version>0.0.4</version>
+	<artifactId>todo</artifactId>
+	<version>0.0.5</version>
 	<name>spring-boot-todo-application</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

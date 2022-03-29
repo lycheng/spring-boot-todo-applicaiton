@@ -5,6 +5,19 @@ Project structure will follow the [2.1 Structuring Your Code][1]
 
 # Change Log
 
+0.0.5
+---
+
+Features:
+
+* Use the “plural” name to denote the collection resource archetype, `todo` to `todos`
+* add Makefile for package build
+
+References:
+
+* <https://stackoverflow.com/a/50613762>
+
+
 0.0.4
 ---
 
@@ -33,17 +46,17 @@ Test with HTTPie
 
 ```shell
 # new item
-http POST http://host.docker.internal:8080/todo/ content=content finished=1
+http POST http://host.docker.internal:8080/todos/ content=content finished=1
 
 # update item
-http put http://host.docker.internal:8080/todo/1 content='new content' finished=0
+http put http://host.docker.internal:8080/todos/1 content='new content' finished=0
 
 # get item
-http http://host.docker.internal:8080/todo/
-http http://host.docker.internal:8080/todo/1
+http http://host.docker.internal:8080/todos/
+http http://host.docker.internal:8080/todos/1
 
 # delete item
-http DELETE http://host.docker.internal:8080/todo/1
+http DELETE http://host.docker.internal:8080/todos/1
 ```
 
 References

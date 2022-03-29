@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
-@RequestMapping("/todo")
+@RequestMapping("/todos")
 public class Controller {
 
     @Autowired
