@@ -12,6 +12,8 @@ Features:
 
 * Use the “plural” name to denote the collection resource archetype, `todo` to `todos`
 * add Makefile for package build
+* Spring boot version updated to 2.6.6
+* ControllerAdvice for custom exception handling
 
 References:
 

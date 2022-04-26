@@ -1,6 +1,5 @@
 package me.lycheng.todoapp.todo;
 
-import me.lycheng.todoapp.todo.model.Item;
 import me.lycheng.todoapp.todo.rest.DelItemResponse;
 import me.lycheng.todoapp.todo.rest.ItemRequest;
 import me.lycheng.todoapp.todo.rest.ItemResponse;
