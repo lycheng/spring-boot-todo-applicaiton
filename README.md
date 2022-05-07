@@ -8,6 +8,8 @@ Project structure will follow the [2.1 Structuring Your Code][1]
 0.0.5
 ---
 
+PR: [#3](https://github.com/lycheng/spring-boot-todo-applicaiton/pull/5)
+
 Features:
 
 * Use the “plural” name to denote the collection resource archetype, `todo` to `todos`
