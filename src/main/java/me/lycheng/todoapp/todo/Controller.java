@@ -1,13 +1,13 @@
 package me.lycheng.todoapp.todo;
 
+import me.lycheng.todoapp.todo.exception.ItemNotFoundException;
 import me.lycheng.todoapp.todo.rest.DelItemResponse;
 import me.lycheng.todoapp.todo.rest.ItemRequest;
 import me.lycheng.todoapp.todo.rest.ItemResponse;
 import me.lycheng.todoapp.todo.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.format.annotation.NumberFormat;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -31,10 +31,10 @@ public class Controller {
     }
 
     @GetMapping("/{id}")
-    public ItemResponse getItem(@Valid @NotNull @PathVariable int id) {
+    public ItemResponse getItem(@Valid @NotNull @PathVariable @NumberFormat int id) {
         var resp = svc.getItem(id);
         if (resp == null) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "item not found", null);
+            throw new ItemNotFoundException(id);
         }
         return resp;
     }
@@ -43,7 +43,7 @@ public class Controller {
     public DelItemResponse delItem(@Valid @NotNull @PathVariable int id) {
         var resp = svc.delItem(id);
         if (resp == null) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "item not found", null);
+            throw new ItemNotFoundException(id);
         }
         return resp;
     }
@@ -52,7 +52,7 @@ public class Controller {
     public ItemResponse putItem(@Valid @NotNull @PathVariable int id, @Valid @RequestBody ItemRequest request) {
         var resp = svc.putItem(id, request);
         if (resp == null) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "item not found", null);
+            throw new ItemNotFoundException(id);
         }
         return resp;
     }
